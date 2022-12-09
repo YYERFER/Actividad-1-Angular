@@ -1,0 +1,81 @@
+.encabezado{
+    display: flex;
+    justify-content: center;
+ 
+}
+.encabezado h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align:center ;
+    align-items: center;
+    font-size: 3.5rem;
+    color: rgb(21, 10, 122);
+    font-weight: bold;
+    text-shadow: 0 0px 5px rgb(235, 90, 6);
+}
+.encabezado .imagen {
+   width: 60%;
+    display: flex;
+    justify-content: center;
+  
+
+}
+.encabezado .imagen img{
+    width: 10rem;  
+}
+
+/* DATOS */
+.datos-1{
+    margin-left: 20px;
+}
+.datos-1 h2{
+    margin:100px 0 30px 0;
+    text-align: center;
+}
+
+/* ESTUDIOS REALIZADOS */
+.estudios .estudios-1{
+    margin-left: 20px;
+}
+.estudios-1 h2{
+    margin:80px 0 30px 0;
+    text-align: center;
+}
+
+.estudios-1 h4{
+    margin:0 0 15px 40px;
+}
+
+/* CURSOS */
+.cursos .cursos-1{
+    margin-left: 20px;
+}
+.cursos-1 h2{
+    margin:80px 0 30px 0;
+    text-align: center;
+}
+
+/* INTERESES */
+.intereses{
+    margin-bottom: 50px;
+}
+.intereses .intereses-1{
+    margin-left: 20px;
+}
+.intereses-1 h2{
+    margin:80px 0 30px 0;
+    text-align: center;
+}
+
+/* HABILIDADES */
+.habilidades{
+    margin-bottom: 50px;
+}
+.habilidades .habilidades-1{
+    margin-left: 20px;
+}
+.habilidades-1 h2{
+    margin:80px 0 30px 0;
+    text-align: center;
+}

@@ -1,0 +1,74 @@
+<h1>Registro</h1>
+<div class="contacto">
+    <div class="form">
+        <form (ngSubmit)="limpiar()" action="">
+
+            <div class="textNombre">
+                <label for="type-nombre">Nombre</label>
+                <div class="nombre-campo">
+                    <input 
+                    type="text" 
+                    id="type-nombre" 
+                    class="campoNombre"
+                    placeholder="Ingresa tu nombre" 
+                    required
+                    name="nombre"
+                    [(ngModel)]="obj.nombre"
+                    />
+                </div>
+
+            </div>
+
+            <div class="textApellido">
+                <label for="type-apellido">Apellido</label>
+                    <div class="apellido-campo">
+                        <input 
+                        type="text" 
+                        id="type-apellido" 
+                        class="campoApellido"
+                        placeholder="Ingresa tu apellido" 
+                        required
+                        name="nombre"
+                        [(ngModel)]="obj.apellido"
+                        />
+                            
+                    </div>
+                
+            </div>
+
+            <div class="sexo">
+                <label for="">Sexo</label>
+                <div class="select-sexo">
+                    <select>
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="no definido">No Definido</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="email">
+                <label for="type-email">Correo Eléctronico </label>
+                <div class="imgMail-campo">
+                    <input 
+                    type="email" 
+                    id="type-email" 
+                    class="campoMail"
+                    placeholder="Ingresa tu correo electrónico" 
+                    required
+                    name="nombre"
+                    [(ngModel)]="obj.email"
+                    />
+                </div>
+
+            </div>
+
+            <div class="boton-registrar">
+                <button type="submit">Registrarme</button>
+                
+            </div>
+
+
+        </form>
+    </div>
+</div>

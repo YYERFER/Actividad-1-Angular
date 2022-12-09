@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Practica
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.10.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# Actividad-1-Angular
+Actividad de la lección 1, 2 y 3
+>>>>>>> 0a9e8b719a50a2bf6134684878d75efbc7d47ff0

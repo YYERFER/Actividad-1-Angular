@@ -1,94 +1,94 @@
-<h1>Registro</h1>
+<h1>Formulario</h1>
+
 <div class="contacto">
     <div class="form">
-        <form (ngSubmit)="guardar()" action="">
+        <form (ngSubmit)="mostrar()" action="">
 
             <div class="textNombre">
                 <label for="type-nombre">Nombre</label>
-                <div  class="nombre-campo" >
-                    
-                    <!-- appInputValidar -->
-                    <input appInputValidar
+                <div  class="nombre-campo" > 
+                    <input appInputFormulario 
                     type="text" 
                     id="type-nombre" 
                     class="campoNombre"
                     placeholder="Ingresa tu nombre" 
                     required
-                    [value]="validarInput"
                     name="nombre"
-                    [(ngModel)]="obj.nombre"
-                    />
-                    
+                    [(ngModel)]="objeto.nombre"
+                    /><span *ngIf="!objeto.nombre">*</span>
                 </div>
-
             </div>
 
             <div class="textApellido">
                 <label for="type-apellido">Apellido</label>
                     <div class="apellido-campo">
                         <input 
-                        appInputValidar
                         type="text" 
                         id="type-apellido" 
                         class="campoApellido"
                         placeholder="Ingresa tu apellido" 
                         required
                         name="apellido"
-                        [(ngModel)]="obj.apellido"
-                        />
-                            
+                        [(ngModel)]="objeto.apellido"
+                        /><span *ngIf="!objeto.apellido">*</span>
                     </div>
-                
-            </div>
-
-            <div class="sexo">
-                <label for="">Sexo</label>
-                <div class="select-sexo">
-                    <select
-                    name="sexo"
-                    [(ngModel)]="obj.sexo">
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="no definido">No Definido</option>
-                    </select>
-                </div>
             </div>
 
             <div class="email">
                 <label for="type-email">Correo Eléctronico </label>
                 <div class="imgMail-campo">
                     <input
-                    appInputValidar
                     type="email" 
                     id="type-email" 
                     class="campoMail"
                     placeholder="Ingresa tu correo electrónico" 
                     required
-                    name="email"
-                    [(ngModel)]="obj.email"
-                    />
+                     name="email"
+                    [(ngModel)]="objeto.email" 
+                    /><span *ngIf="!objeto.email">*</span>
                 </div>
-
             </div>
+
+
+            <div class="textPassword">
+                <label for="type-password">Password</label>
+                    <div class="password-campo">
+                        <input 
+                        type="password" 
+                        id="type-password" 
+                        class="campoPassword"
+                        placeholder="Ingresa Contraseña" 
+                        required
+                        name="password"
+                        [(ngModel)]="objeto.password"
+                    /><span *ngIf="objeto.password.length < 9 " class="spanPassword">* Debe tener como mínimo 9 caracteres</span>
+                    
+                </div>
+            </div>
+
             <!-- *ngIf="nombre" -->
-            <div *ngIf="botonVisible"> 
+            <div *ngIf="botonVisible" >
+
+                <div class="linea"></div>
+
+                <h4 >Datos del Usuario</h4>
 
                 <div class="mostrar">
-                    <div class="linea"></div>
-                    <h4 >datos Ingresados del Cliente</h4>
                     <p>su Nombre es:<input type="text"class="muestraNombre" [value]="nombre"  disabled></p>
                     <p>su Apellido es: <input type="text" class="muestraApellido" [value]="apellido "  disabled></p>
-                    <p>sexo: <input type="text" class="muestraSexo" [value]="sexo"  disabled></p>
                     <p>Su correo: <input type="text" class="muestraEmail" [value]="email"  disabled></p>
                 </div>
 
             </div>
 
             <div class="boton-registrar">
-                <button type="submit" (click)="visibleBoton()" >
-                   {{botonVisible ? 'Volver': 'Registrar'}} 
+                <button type="submit"  (click)="visibleBoton()" >
+                    {{botonVisible ? 'Volver': 'Mostrar'}} 
+                    
                 </button>
+                
             </div>
+
 
         </form>
     </div>

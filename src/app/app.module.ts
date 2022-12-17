@@ -9,6 +9,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CurriculumComponent } from './pages/curriculum/curriculum.component';
 import { FormsModule } from '@angular/forms';
+import { MenuColorDirective } from './directives/menu-color.directive';
+import { InputFormularioDirective } from './directives/input-formulario.directive';
+import { FormularioComponent } from './pages/formulario/formulario.component';
+import { InputValidarDirective } from './directives/input-validar.directive';
 
 
 
@@ -20,6 +24,10 @@ import { FormsModule } from '@angular/forms';
         ContactComponent,
         HomeComponent,
         CurriculumComponent,
+        MenuColorDirective,
+        InputFormularioDirective,
+        FormularioComponent,
+        InputValidarDirective,
     ],
     providers: [],
     bootstrap: [AppComponent],

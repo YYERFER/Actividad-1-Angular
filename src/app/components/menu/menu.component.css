@@ -1,0 +1,16 @@
+h1{
+    background-color: #8d9ead;
+    border-radius: 4px;
+    font-size: 5px;
+    margin-left: 20px;
+    color: #171e24;
+    outline:aqua;
+}
+
+.navbar-nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+}

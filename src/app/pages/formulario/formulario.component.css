@@ -31,7 +31,8 @@ form{
 .textNombre{
     margin: 30px 0px 30px 0px ;
 }
-.textNombre label{
+.textNombre label,
+.textPassword label{
     font-size: 1.4rem;
     color:  #c44e1c;
 
@@ -49,7 +50,7 @@ form{
         height: 35px;
         width: 60%;
         border: transparent;
-        /* outline: transparent; */
+        outline: transparent;
         border-bottom: 1px solid rgb(161, 159, 159);
         font-family: 'Merriweather', sans-serif;
         font-weight: 200;
@@ -79,7 +80,7 @@ form{
         height: 35px;
         width: 60%;
         border: transparent;
-        /* outline: transparent; */
+        outline: transparent;
         border-bottom: 1px solid rgb(161, 159, 159);
         font-family: 'Merriweather', sans-serif;
         font-weight: 200;
@@ -87,59 +88,6 @@ form{
         font-size: 1.2rem;
 } 
 
-/* SEXO */
-.sexo{
-    margin-bottom:30px;
-}
-.sexo label{
-    font-size: 1.4rem;
-    color:  #c44e1c;
-    position: relative;
-}
-
-.select-sexo {
-    position: relative;
-    border-bottom: 1px solid #ccc;
-    width: 60%;
-    height: 35px;
-    color:rgb(161, 159, 159);;
-    /* z-index: 1; */
-  
-  }
-  .select-sexo:before {
-    content: '';
-    position: absolute;
-    right: 5px;
-    top: 15px;
-    height: 8px;
-    width: 8px;
-    border-left:2px solid;
-    border-bottom: 2px solid;
-    transform: rotate(-45deg);
-    border-color: rgb(161, 159, 159);
-    pointer-events:none;
-}
-
-.select-sexo select {
-    padding: 2px 8px;
-    width: 100%;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    appearance: none;
-    font-size: 1.3rem;
-    color: rgb(90, 88, 88);
-    cursor: pointer;
- 
-}
-
-.select-sexo select:focus{
-outline: none;
-}
-select::-ms-expand{
-    display: none;
-}
 
 /* CAMPO EMAIL */
 .email{
@@ -167,7 +115,8 @@ select::-ms-expand{
     width: 0px;
 }
  
-.campoMail{
+.campoMail,
+.campoPassword{
         /* background-color: transparent; 
         transition: 0.2s linear;
         padding-left: 0px;
@@ -176,7 +125,7 @@ select::-ms-expand{
         height: 35px;
         width: 60%;
         border: transparent;
-        /* outline: transparent; */
+        outline: transparent;
         border-bottom: 1px solid rgb(161, 159, 159);
         font-family: 'Merriweather', sans-serif;
         font-weight: 200;
@@ -232,8 +181,8 @@ select::-ms-expand{
     }
      .muestraNombre, 
      .muestraApellido, 
-     .muestraSexo,
-     .muestraEmail{
+     .muestraEmail,
+     .muestraPassword{
         border: none;
         border-bottom: 1px solid;
         outline-color:transparent;
@@ -246,9 +195,15 @@ select::-ms-expand{
      .muestraApellido{
         margin-left: 10px;
      }
-     .muestraSexo{
-        margin-left: 76px;
-     }
+    
      .muestraEmail{
         margin-left: 40px;
      }
+span{
+    color: red;
+    font-size: 1rem;
+}
+.spanPassword{
+    color: red;
+    font-size: 0.8rem;
+}

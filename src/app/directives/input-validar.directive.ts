@@ -24,8 +24,7 @@ export class InputValidarDirective {
         this.elementref.nativeElement.style.outlineColor='';
       }
 
-
-  }
+    }
 
 }
 

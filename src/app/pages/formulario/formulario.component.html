@@ -2,20 +2,20 @@
 
 <div class="contacto">
     <div class="form">
-        <form (ngSubmit)="mostrar()" action="">
+        <form (ngSubmit)="show()" action="">
 
             <div class="textNombre">
                 <label for="type-nombre">Nombre</label>
                 <div  class="nombre-campo" > 
-                    <input appInputFormulario 
+                    <input  
                     type="text" 
                     id="type-nombre" 
                     class="campoNombre"
                     placeholder="Ingresa tu nombre" 
                     required
                     name="nombre"
-                    [(ngModel)]="objeto.nombre"
-                    /><span *ngIf="!objeto.nombre">*</span>
+                    [(ngModel)]="object.name"
+                    /><span *ngIf="!object.name">*</span>
                 </div>
             </div>
 
@@ -29,8 +29,8 @@
                         placeholder="Ingresa tu apellido" 
                         required
                         name="apellido"
-                        [(ngModel)]="objeto.apellido"
-                        /><span *ngIf="!objeto.apellido">*</span>
+                        [(ngModel)]="object.surname"
+                        /><span *ngIf="!object.surname">*</span>
                     </div>
             </div>
 
@@ -44,8 +44,9 @@
                     placeholder="Ingresa tu correo electrónico" 
                     required
                      name="email"
-                    [(ngModel)]="objeto.email" 
-                    /><span *ngIf="!objeto.email">*</span>
+                    [(ngModel)]="object.email" 
+                    /><span *ngIf="!object.email.match(EMAIL)">*</span>
+                   
                 </div>
             </div>
 
@@ -60,30 +61,29 @@
                         placeholder="Ingresa Contraseña" 
                         required
                         name="password"
-                        [(ngModel)]="objeto.password"
-                    /><span *ngIf="objeto.password.length < 9 " class="spanPassword">* Debe tener como mínimo 9 caracteres</span>
+                        [(ngModel)]="object.password"
+                    /><span *ngIf="object.password.length < 9 " class="spanPassword">* Debe tener como mínimo 9 caracteres</span>
                     
                 </div>
             </div>
 
-            <!-- *ngIf="nombre" -->
-            <div *ngIf="botonVisible" >
+            <div *ngIf="validateButton" >
 
                 <div class="linea"></div>
 
                 <h4 >Datos del Usuario</h4>
 
                 <div class="mostrar">
-                    <p>su Nombre es:<input type="text"class="muestraNombre" [value]="nombre"  disabled></p>
-                    <p>su Apellido es: <input type="text" class="muestraApellido" [value]="apellido "  disabled></p>
+                    <p>su Nombre es:<input type="text"class="muestraNombre" [value]="name"  disabled></p>
+                    <p>su Apellido es: <input type="text" class="muestraApellido" [value]="surname "  disabled></p>
                     <p>Su correo: <input type="text" class="muestraEmail" [value]="email"  disabled></p>
                 </div>
 
             </div>
 
             <div class="boton-registrar">
-                <button type="submit"  (click)="visibleBoton()" >
-                    {{botonVisible ? 'Volver': 'Mostrar'}} 
+                <button type="submit"  (click)="visibilityButton()" >
+                    {{validateButton ? 'Volver': 'Mostrar'}} 
                     
                 </button>
                 

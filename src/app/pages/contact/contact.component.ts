@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 
-interface Fomrulario{
-  nombre: string;
-  apellido:string;
-  sexo: string;
+interface Formulario{
+  name: string;
+  surname:string;
+  gender: string;
   email:string;
 }
 
@@ -15,64 +15,55 @@ interface Fomrulario{
 })
 export class ContactComponent{
 
-  palabra: string='hola';
-
-  public nombre:any='';
-  public apellido:any='';
-  public sexo:any='';
+  public name:any='';
+  public surname:any='';
+  public gender:any='';
   public email:any='';
 
-  public botonVisible:boolean=false;
+  public validateButton:boolean=false;
 
-public noValidarInput:string='';
-// public validarInput: string='';
-
-  obj: Fomrulario={
-    nombre: '',
-    apellido: '',
-    sexo:'',
+  object: Formulario={
+    name: '',
+    surname: '',
+    gender:'',
     email:'',
   }
 
-  
-
-  validarInput: string = 'vacio';
- 
-
-  guardar():void{
+  public save():void{
    
-    if( this.obj.apellido.trim().length===0 || this.obj.email.trim().length===0 || this.obj.sexo.length===0){
+    if(this.object.name.trim().length===0 || this.object.surname.trim().length===0 || this.object.email.trim().length===0 || this.object.gender.length===0){
       
       return;
     }
 
     
-      this.nombre = this.obj.nombre.toUpperCase();
-      this.apellido = this.obj.apellido.toUpperCase();
-      this.sexo = this.obj.sexo.toUpperCase();
-      this.email = this.obj.email.toUpperCase();
+      this.name = this.object.name.toUpperCase();
+      this.surname = this.object.surname.toUpperCase();
+      this.gender = this.object.gender.toUpperCase();
+      this.email = this.object.email.toUpperCase();
 
-        this.obj={
-        nombre:'',
-        apellido:'',
-        sexo:'',  
+        this.object={
+        name:'',
+        surname:'',
+        gender:'',  
         email:'',
         }
 
    
 
   }
-  visibleBoton(){
+  public visibilityButton(){
+ 
 
-   if(!this.botonVisible){
-      if( this.obj.apellido.trim().length===0 || this.obj.email.trim().length===0 || this.obj.sexo.length===0){
+   if(!this.validateButton){
+      if( this.object.name.trim().length===0 || this.object.surname.trim().length===0 || this.object.email.trim().length===0 || this.object.gender.length===0){
       
       return;
     }
-    this.botonVisible = !this.botonVisible
+    this.validateButton = !this.validateButton
    }
    else{
-      this.botonVisible = !this.botonVisible
+      this.validateButton = !this.validateButton
     }
   }
 

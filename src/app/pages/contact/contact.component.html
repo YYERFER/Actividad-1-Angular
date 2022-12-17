@@ -1,22 +1,21 @@
 <h1>Registro</h1>
 <div class="contacto">
     <div class="form">
-        <form (ngSubmit)="guardar()" action="">
+        <form (ngSubmit)="save()" action="">
 
             <div class="textNombre">
                 <label for="type-nombre">Nombre</label>
                 <div  class="nombre-campo" >
                     
-                    <!-- appInputValidar -->
-                    <input appInputValidar
+                    <input 
+                    appInputValidar
                     type="text" 
                     id="type-nombre" 
                     class="campoNombre"
                     placeholder="Ingresa tu nombre" 
                     required
-                    [value]="validarInput"
                     name="nombre"
-                    [(ngModel)]="obj.nombre"
+                    [(ngModel)]="object.name"
                     />
                     
                 </div>
@@ -34,7 +33,7 @@
                         placeholder="Ingresa tu apellido" 
                         required
                         name="apellido"
-                        [(ngModel)]="obj.apellido"
+                        [(ngModel)]="object.surname"
                         />
                             
                     </div>
@@ -46,7 +45,7 @@
                 <div class="select-sexo">
                     <select
                     name="sexo"
-                    [(ngModel)]="obj.sexo">
+                    [(ngModel)]="object.gender">
                         <option value="femenino">Femenino</option>
                         <option value="masculino">Masculino</option>
                         <option value="no definido">No Definido</option>
@@ -65,28 +64,28 @@
                     placeholder="Ingresa tu correo electrónico" 
                     required
                     name="email"
-                    [(ngModel)]="obj.email"
+                    [(ngModel)]="object.email"
                     />
                 </div>
 
             </div>
-            <!-- *ngIf="nombre" -->
-            <div *ngIf="botonVisible"> 
+          
+            <div *ngIf="validateButton"> 
 
                 <div class="mostrar">
                     <div class="linea"></div>
                     <h4 >datos Ingresados del Cliente</h4>
-                    <p>su Nombre es:<input type="text"class="muestraNombre" [value]="nombre"  disabled></p>
-                    <p>su Apellido es: <input type="text" class="muestraApellido" [value]="apellido "  disabled></p>
-                    <p>sexo: <input type="text" class="muestraSexo" [value]="sexo"  disabled></p>
-                    <p>Su correo: <input type="text" class="muestraEmail" [value]="email"  disabled></p>
+                    <p>Nombre:<input type="text"class="muestraNombre" [value]="name"  disabled></p>
+                    <p>Apellido: <input type="text" class="muestraApellido" [value]="surname "  disabled></p>
+                    <p>Sexo: <input type="text" class="muestraSexo" [value]="gender"  disabled></p>
+                    <p>Correo: <input type="text" class="muestraEmail" [value]="email"  disabled></p>
                 </div>
 
             </div>
 
             <div class="boton-registrar">
-                <button type="submit" (click)="visibleBoton()" >
-                   {{botonVisible ? 'Volver': 'Registrar'}} 
+                <button type="submit" (click)="visibilityButton()" >
+                   {{validateButton ? 'Volver': 'Registrar'}} 
                 </button>
             </div>
 

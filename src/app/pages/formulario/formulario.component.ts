@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 interface interfaceFormulario{
-  nombre: string;
-  apellido: string;
+  name: string;
+  surname: string;
   password: string;
   email: string;
 }
@@ -15,15 +15,15 @@ interface interfaceFormulario{
 })
 export class FormularioComponent {
 
-    public nombre:any='';
-    public apellido:any='';
+    public name:any='';
+    public surname:any='';
     public email:any='';
-    public botonVisible:boolean=false;
+    public validateButton:boolean=false;
 
 
-    objeto: interfaceFormulario ={
-      nombre:'',
-      apellido:'',
+    object: interfaceFormulario ={
+      name:'',
+      surname:'',
       password:'',
       email:'',
     }
@@ -31,23 +31,24 @@ export class FormularioComponent {
     
     
     public EMAIL = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+   
 
-    public mostrar(): void{
-      if(this.objeto.nombre.trim().length===0 || this.objeto.apellido.trim().length===0 || this.objeto.email.trim().length===0 || this.objeto.password.length < 9){
+    public show(): void{
+      if(this.object.name.trim().length===0 || this.object.surname.trim().length===0 || this.object.email.trim().length===0 || this.object.password.length < 9){
       
         return;
-      }else if(!this.objeto.email.match(this.EMAIL)){
+      }else if(!this.object.email.match(this.EMAIL)){
         return;
       }
 
-      this.nombre = this.objeto.nombre.toUpperCase();
-      this.apellido = this.objeto.apellido.toUpperCase();
-      this.email = this.objeto.email;
+      this.name = this.object.name.toUpperCase();
+      this.surname = this.object.surname.toUpperCase();
+      this.email = this.object.email;
       
 
-      this.objeto={
-        nombre:'',
-        apellido:'',  
+      this.object={
+        name:'',
+        surname:'',  
         email:'',
         password:'',
       }
@@ -55,18 +56,19 @@ export class FormularioComponent {
 
     }
 
-    visibleBoton(){
-    
-      // this.botonVisible = !this.botonVisible
-      if(!this.botonVisible){
-        if(this.objeto.nombre.trim().length===0 || this.objeto.apellido.trim().length===0 || this.objeto.email.trim().length===0 || this.objeto.password.length < 9){
+    public visibilityButton(){
+  
+      if(!this.validateButton){
+        if(this.object.name.trim().length===0 || this.object.surname.trim().length===0 || this.object.email.trim().length===0 || this.object.password.length < 9){
       
           return;
+        }else if(!this.object.email.match(this.EMAIL)){
+          return;
         }
-      this.botonVisible = !this.botonVisible
+      this.validateButton = !this.validateButton
      }
      else{
-        this.botonVisible = !this.botonVisible
+        this.validateButton = !this.validateButton
       }
 
     }

@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { MenuColorDirective } from './directives/menu-color.directive';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { InputValidarDirective } from './directives/input-validar.directive';
+import { CharactersListComponent } from './pages/characters-list/characters-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CharactersCardsComponent } from './components/characters-cards/characters-cards.component';
 
 
 
@@ -26,6 +29,9 @@ import { InputValidarDirective } from './directives/input-validar.directive';
         MenuColorDirective,
         FormularioComponent,
         InputValidarDirective,
+        CharactersListComponent,
+        CharactersCardsComponent,
+        
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -33,7 +39,8 @@ import { InputValidarDirective } from './directives/input-validar.directive';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }

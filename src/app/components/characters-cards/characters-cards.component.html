@@ -1,0 +1,24 @@
+<div  (click)="selectCharacters(Character)" class="card" >
+   
+    <div class="card-imagen">
+            <img src="{{Character.thumbnail.path}}.{{Character.thumbnail.extension}}" alt="{{Character.name}}">
+    </div>
+    <div class="card-content">
+        <h3>{{ Character.name }}</h3>
+        <div class="card-data">
+            <h4>Descripción</h4>
+            <p class="overflow-descrip" *ngIf="Character.description ; else desc">
+                {{ Character.description }}
+            </p> 
+
+            <ng-template #desc>{{ Character.description }} No posee Descripción</ng-template>
+            
+            <p>
+               <b>Modificado: </b>{{ Character.modified | date:'MMM d, y - h:mm:ss a'}}
+              
+            </p>
+        </div>
+        
+    </div>
+</div> 
+

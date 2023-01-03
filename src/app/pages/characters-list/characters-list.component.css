@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    }
+
+body{
+    /* background: url(../../../assets/img/fondo_Marvel.jpg) no-repeat center / cover;  */
+   
+  
+}
+
+
+.imgFondo{
+    position: absolute;
+    z-index: 0;
+    margin: 50px 0 0 0;
+    /* width: 100vw;
+    height: 100vh; */
+    background-color: #380379;
+    
+}
+
+.ListCharacters{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    margin-bottom: 40px;
+    display: flex;
+    /* flex-direction: column; */
+    /* text-align: center; */
+    /* color: #fff; */
+    /* font-size: 1.2 rem; */
+    /* justify-content: center; */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: inset -1px -2px 10px -2px blanchedalmond;
+
+}
+
+
+.characterComic{
+    /* background-color: blue; */
+    color: #fff;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.characterComic h3{
+    color: yellow;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    color: rgb(236, 77, 4);
+    width: 40%;
+    padding-left: 40px;
+    float: left;
+   
+}
+.cards-all{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+}

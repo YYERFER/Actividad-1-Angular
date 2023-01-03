@@ -1,0 +1,28 @@
+<img class="imgFondo" [src]="myImgFondo" alt="Imagen Marvel">
+
+<!-- Mostrando el nombre del Personaje al hacer evento sobre la card -->
+<div class="ListCharacters">
+    <h1>Listado de Personajes</h1>
+    <div class="characterComic" *ngIf="selectPerson">
+        <p>El Comics Seleccionado es:</p> 
+        <h3>{{ selectPerson.name | uppercase}}</h3>
+    </div>
+</div>
+
+<!-- Listando en las Cards a Todos los personajes -->
+<div class="cards-all" >
+  
+    <app-characters-cards *ngFor="let Character of characterList"
+    [Character]="Character"
+    (sendCharacters)="receiveCharacters($event)">
+        
+    </app-characters-cards>
+             
+</div>
+
+<!-- Msj de Error al no cargar la pagina -->
+<div>
+    {{error}}
+</div>
+
+
